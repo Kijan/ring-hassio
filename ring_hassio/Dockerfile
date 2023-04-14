@@ -6,7 +6,7 @@ ENV LANG C.UTF-8
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-EXPOSE 3000/tcp
+EXPOSE 6780/tcp
 
 RUN apk add --no-cache \
     nodejs \
@@ -14,7 +14,7 @@ RUN apk add --no-cache \
     ffmpeg \
     git && \
     cd / && \
-    git clone https://github.com/jeroenterheerdt/ring-hassio && \
+    git clone https://github.com/kijan/ring-hassio && \
     cd ring-hassio/ring_hassio && \
     npm install --unsafe-perm && \
     chmod a+x run.sh
